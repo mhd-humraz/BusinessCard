@@ -1,0 +1,109 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="style.css">
+  <title>Mhd Humraz | Digital Business Card</title>
+
+  
+</head>
+
+ 
+<body>
+
+  <div class="scene">
+    <div class="card">
+
+      <!-- FRONT -->
+      <div class="card-face card-front">
+
+        <div class="profile-section">
+          <img
+            src="https://i.postimg.cc/zvkQxCR2/humraz.jpg"
+            class="profile"
+            alt="Profile"
+          >
+        </div>
+
+        <div class="info">
+          <h1>Mhd Humraz</h1>
+          <p class="role">Developer • Builder</p>
+
+          <p class="bio">
+            Building useful digital products with technology.
+          </p>
+
+          <div class="contact">
+            <span>📞 +91 77368 63289</span>
+            <span>✉️ https://humraz.vercel.app/</span>
+          </div>
+        </div>
+
+        <div class="flip-hint">
+          ↻ Tap to flip
+        </div>
+
+      </div>
+
+
+      <!-- BACK -->
+      <div class="card-face card-back">
+
+        <div class="back-content">
+
+          <h2>Connect With Me</h2>
+
+          <img
+            src="https://i.postimg.cc/d1wm4zRz/qrcode-humraz-vercel-app.png"
+            class="qr"
+            alt="QR Code"
+          >
+
+          <p>Scan to view my profile</p>
+
+          <div class="socials">
+
+            <a href="https://github.com/mhd-humraz" target="_blank">
+              💻 GitHub
+            </a>
+
+            <a href="www.linkedin.com/in/muhammed-humraz-283a5435b" target="_blank">
+              💼 LinkedIn
+            </a>
+
+            <a href="https://instagram.com/" target="_blank">
+              📸 Instagram
+            </a>
+
+          </div>
+
+          <div class="website">
+            🌐  humraz.vercel.app
+          </div>
+
+        </div>
+
+        <div class="flip-hint">
+          ↻ Tap to flip back
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <script>
+    const card = document.querySelector(".card");
+
+    card.addEventListener("click", () => {
+      card.classList.toggle("flipped");
+    });
+  </script>
+
+</body>
+ 
+</html>
+

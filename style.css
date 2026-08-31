@@ -1,0 +1,240 @@
+ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  padding: 20px;
+}
+
+/* Card container */
+
+.scene {
+  width: 700px;
+  max-width: 95vw;
+  height: 400px;
+  perspective: 1500px;
+}
+
+/* Actual card */
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(.2,.7,.2,1);
+
+  cursor: pointer;
+}
+
+/* Flip */
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Both sides */
+
+.card-face {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  border-radius: 25px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.5);
+}
+
+/* FRONT */
+
+.card-front {
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #eeeeee
+  );
+
+  color: #111;
+
+  display: flex;
+  align-items: center;
+
+  padding: 50px;
+}
+
+.profile-section {
+  margin-right: 40px;
+}
+
+.profile {
+  width: 150px;
+  height: 150px;
+
+  object-fit: cover;
+
+  border-radius: 20px;
+
+  border: 5px solid #111;
+}
+
+.info h1 {
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+
+.role {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.bio {
+  max-width: 350px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  margin-top: 25px;
+
+  font-size: 14px;
+}
+
+/* BACK */
+
+.card-back {
+  background: #181818;
+  color: white;
+
+  transform: rotateY(180deg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.back-content h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.qr {
+  width: 130px;
+  height: 130px;
+
+  background: white;
+  padding: 8px;
+
+  border-radius: 10px;
+
+  margin-bottom: 10px;
+}
+
+.back-content p {
+  color: #aaa;
+  margin-bottom: 18px;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.socials a {
+  text-decoration: none;
+  color: white;
+
+  background: #292929;
+
+  padding: 10px 14px;
+
+  border-radius: 10px;
+
+  font-size: 13px;
+}
+
+.website {
+  margin-top: 20px;
+  color: #aaa;
+}
+
+/* Flip hint */
+
+.flip-hint {
+  position: absolute;
+
+  bottom: 20px;
+  right: 25px;
+
+  font-size: 12px;
+  opacity: .5;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .scene {
+    height: 280px;
+  }
+
+  .card-front {
+    padding: 25px;
+  }
+
+  .profile {
+    width: 90px;
+    height: 90px;
+  }
+
+  .profile-section {
+    margin-right: 20px;
+  }
+
+  .info h1 {
+    font-size: 25px;
+  }
+
+  .role {
+    font-size: 14px;
+  }
+
+  .bio {
+    display: none;
+  }
+
+  .contact {
+    font-size: 11px;
+  }
+
+  .socials {
+    flex-direction: column;
+  }
+
+}
+ 
